@@ -1,0 +1,8 @@
+<view class="keyboard">
+    <view class="keyboard-box">
+        <view class="keyboard-btn" bind:tap="inputchanging" data-id="{{item}}" wx:key="*this" wx:for="{{keyboardword}}">
+            {{item}}
+        </view>
+    </view>
+</view>
+{{word}}

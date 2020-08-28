@@ -1,0 +1,9 @@
+<view class="container">
+	<view class="title">我的卡片</view>
+	<view class="cards">
+		<view class="card " wx:for="{{specialCards}}">
+			<image class="{{item.bgId==curId?'downloading':''}}" src=" {{item.filePath}}" bindlongtap="downloadImage" data-filepath="{{item.filePath}}" data-bgId="{{item.bgId}}">{{item.filePath}}</image>
+			<!-- <view class="card-info">{{item.ownedTime}}</view> -->
+		</view>
+	</view>
+</view>

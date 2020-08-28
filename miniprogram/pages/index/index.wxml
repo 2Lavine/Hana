@@ -1,0 +1,40 @@
+<view class="container"  bind:touchstart="touchStart" bind:touchend="touchEnd">
+	<image class="bg-image" src="{{background}}"  mode="aspectFill"></image>
+	<view class="icon-box" bind:tap="toPersonal">
+		<mp-icon icon="discover" color="white" size="{{45}}"></mp-icon>
+	</view>
+	<view class="mask" style="opacity:{{opacity}}"></view>
+	<view class="content">
+		<block wx:if="{{!flag}}">
+			<image class="logo" bind:tap="hiddenMask" style="opacity:{{opacity}}" src="../../images/flower.svg" />
+		</block>
+		<view class="word-content" bind:tap="showWordInfo">
+			<block wx:if="{{!flag}}">
+				<view class="word-input">{{inputword}}</view>
+				<view class="word-item">{{showword}}</view>		
+			<view wx:if="{{rightword=='keep'||rightword=='industry'||rightword=='answer'}}" class="word-explain postscript">(输入完整单词，点击花朵可以跳过单词)</view>
+			</block>
+			<block wx:else>
+				<view class="word-input-activite">{{rightword}}</view>
+			</block>
+			<view class="word-explain">{{explain}}</view>
+		</view>
+	</view>
+	<block wx:if="{{!flag}}">
+		<view class="keyboard">
+			<view class="keyboard-box">
+				<!-- style="background-image: linear-gradient(rgba(235, 123, 153,{{opacity}}),#FFFFFF)" -->
+				<view class="keyboard-btn" style="background-color:rgba(235, 123, 153,{{opacity<0.4?0.4:opacity}}" bind:tap="inputchanging" data-id="{{item}}" wx:for="{{keyboardword}}" wx:key="*this">
+					{{item}}
+				</view>
+			</view>
+		</view>
+	</block>
+</view>
+<view class="modalDlg" wx:if="{{showModal}}">
+	<view class="text">恭喜你看到了神秘卡片，连续看到3次即可解锁下载该卡片哦</view>
+	<view class="btn-box">
+		<button bindtap="dlgCancel">确定</button>
+		<button open-type="share">分享</button>
+	</view>
+</view>

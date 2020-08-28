@@ -1,0 +1,163 @@
+.container {
+  /* display: absolute; */
+  width: 100vw;
+  height: 100vh;
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: auto 100vh;
+}
+.bg-image{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  /* background-position: center; */
+}
+.icon-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-image: linear-gradient(rgba(235, 123, 153, 1), 90%, rgba(236, 236, 236, 1))
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 15vh;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+}
+
+.word-content {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.word-input-activite {
+  margin-bottom: 50rpx;
+  color: white;
+  font-size: 120rpx;
+  height: 120rpx;
+  text-shadow: 2rpx 2rpx 4rpx #333
+}
+
+.word-input {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 100rpx;
+  height: 100rpx;
+  text-shadow: 1rpx 1rpx #333
+}
+
+.word-item {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 50rpx;
+  letter-spacing: 10px;
+  text-shadow: 1rpx 1rpx #333
+}
+
+.word-explain {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70vw;
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 30rpx;
+  text-shadow: 1rpx 1rpx #333
+}
+
+.keyboard-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: transparent;
+  justify-content: space-around;
+  align-content: center;
+  padding: 4vh 6vw;
+  padding-bottom: 0;
+}
+
+.keyboard-btn {
+  color: white;
+  text-align: center;
+  font-weight: 520;
+  font-size: 65rpx;
+  width: 16vw;
+  height: 12vw;
+  line-height: 11vw;
+  border: 1px solid #EB7B99;
+  border-radius: 15%;
+  margin-bottom: 3vw;
+  background-color: #EB7B99;
+  box-shadow: 1px 1px 5px #888888;
+  /* background-image: linear-gradient(90deg, #ffffff 0%, #f7f5f5de 100%),
+      linear-gradient(#000000, #000000); */
+
+}
+
+.keyboard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 32vh;
+  background-color: transparent;
+}
+
+.modalDlg {
+  width: 70%;
+  position: fixed;
+  top: 40vh;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(235, 123, 153, 1), 50%, rgba(236, 236, 236, 0.4))
+}
+
+.btn-box {
+  display: flex;
+}
+
+.text {
+  text-align: center;
+  color: white;
+  margin: 5vw;
+}
+
+button {
+  width: 25vw !important;
+  margin: 2vw !important;
+  background-color: #EB7B99;
+
+  color: white !important;
+}
+.postscript{
+  font-size: 20rpx;
+  color: whitesmoke;
+}

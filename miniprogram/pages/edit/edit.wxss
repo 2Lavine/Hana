@@ -1,0 +1,103 @@
+page {
+    height: 100%;
+}
+
+.container {
+    background-color: rgba(235, 156, 191, 0.5);
+    height: 100%;
+    width: 100vw;
+    /* padding-top: 0.5vw; */
+}
+
+.tab-top {
+    display: flex;
+    justify-content: space-around;
+    height: 6%;
+}
+
+.tab {
+    padding: 1vw 4vw;
+    color: white;
+    text-shadow: 0.5rpx 0.5rpx pink
+}
+
+.activeTab {
+    border-bottom: 3.5px solid white;
+    font-weight: bolder;
+    /* background: ; */
+}
+
+swiper {
+    height: 94%;
+}
+
+scroll-view {
+    height: 100%;
+}
+
+.tips-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tips-tag {
+    background-color: rgba(235, 123, 153, 1);
+    color: white;
+    margin: 3vw;
+    /* margin-bottom: 0; */
+    width: 20vw;
+    text-align: center;
+}
+
+.tips-content {
+    flex: 1;
+    margin-top: 3vw;
+    color: white;
+    font-weight: 222;
+}
+
+.user-tips {
+    /* border: 1px solid rgb(207, 199, 199); */
+    border-radius: 3%;
+
+    border-bottom: 1px dashed grey;
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    margin-top: 4vw;
+    padding-top: 2vw;
+    background-color: rgba(247, 162, 184, 0.5);
+    box-shadow: 1px 1px 3px #aaaaaa
+}
+
+.userninfo-box {
+    align-self: flex-end;
+    margin-right: 5vw;
+    margin-bottom: 1.5vw;
+    display: flex;
+    align-items: center;
+
+}
+
+.liked-box {
+    font-size: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+.username-box {
+    line-height: 3vw;
+    height: 3vw;
+}
+
+mp-icon {
+    margin: 0 10px;
+}
+
+.word-box {
+    text-align: center;
+    color: white;
+    font-size: 60rpx;
+    text-shadow: 2rpx 2rpx palevioletred;
+}

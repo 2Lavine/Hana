@@ -1,0 +1,17 @@
+<view class="container">
+		<view class="user-tips" wx:for="{{usrTips}}" wx:for-item="userTip" wx:key="id">
+				<view class="tips-container" data-id="{{userTip.id}}" data-time="{{lastTapTime}}" bindtap="doubleClick">
+						<view class="tips-box" wx:for="{{userTip.tips}}" wx:for-item="tip">
+								<view class="tips-tag">{{tip.tipsName}}</view>
+								<text class=" tips-content">{{tip.tipsInfo}}</text>
+						</view>
+				</view>
+				<view class="userninfo-box">
+						<view class="liked-box" data-id="{{userTip.id}}" bind:tap="changeLiked_tap">
+								<mp-icon  icon="like" type="field" color="{{userTip.flag?'red':'grey'}}" size="{{25}}" ></mp-icon>
+								<view class="likednum">{{userTip.liked}}</view>
+						</view>
+						<view class="username-box">{{userTip.userName}}</view>
+				</view>
+		</view>
+</view>

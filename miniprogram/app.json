@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cards/cards",
+    "pages/settings/settings",
+    "pages/edit/edit",
+    "pages/add/add",
+    "pages/show/show",
+    "component/keyboard/keyboard",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EB7B99",
+    "navigationBarTitleText": "哈娜单词",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "mp-icon": "components/weui-miniprogram/icon/icon"
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#469FD1",
+    "borderStyle": "white",
+    "backgroundColor":"#EDBACB",
+    "list": [{
+      "selectedIconPath": "images/main.png",
+      "iconPath": "images/main.png",
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "selectedIconPath": "images/setting.png",
+      "iconPath": "images/setting.png",
+      "pagePath": "pages/settings/settings",
+      "text": "设置"
+    }, {
+      "selectedIconPath": "images/words.png",
+      "iconPath": "images/words.png",
+      "pagePath": "pages/edit/edit",
+      "text": "单词本"
+    }]
+  }
+}

@@ -1,0 +1,56 @@
+<view class="container">
+
+	<view class="tab-top">
+		<view class="tab {{tabPage==0?'activeTab':''}}" bindtap="changeTab_tap" data-tab="0">已背单词</view>
+		<view class="tab {{tabPage==1?'activeTab':''}}" bindtap="changeTab_tap" data-tab="1">全部排行</view>
+		<view class="tab {{tabPage==2?'activeTab':''}}" bindtap="changeTab_tap" data-tab="2">再来一遍</view>
+	</view>
+	<swiper current="{{tabPage}}" circular="{{true}}" indicator-dots="{{false}}" duration="500" bindchange="changeTab_move">
+		<swiper-item bind:touchstart="touchStart" bind:touchend="touchEnd">
+			<scroll-view scroll-y="true">
+				<view class="user-tips" wx:for="{{usrTips}}" wx:for-item="userTip" wx:key="word">
+					<view class="word-box">{{userTip.word}}</view>
+					<view class="tips-box" wx:for="{{userTip.tips}}" wx:for-item="tip" wx:key="tipsName">
+						<view class="tips-tag">{{tip.tipsName}}</view>
+						<text class="tips-content">{{tip.tipsInfo}}</text>
+					</view>
+					<view class="userninfo-box">
+						<mp-icon data-sound="{{userTip.sound}}" icon="play" color="white" size="{{25}}" bindtap="playSound"></mp-icon>
+						<!-- <mp-icon data-sound="{{userTip.sound}}" icon="sound" color="white" size="{{25}}" bindtap="editTip" bindlongtap="editTip"></mp-icon> -->
+					</view>
+				</view>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item bind:touchstart="touchStart" bind:touchend="touchEnd">
+			<scroll-view scroll-y="true">
+				<view class="user-tips" wx:for="{{usrTipsAll}}" wx:for-item="userTip" wx:key="word">
+					<view class="word-box">{{userTip.word}}</view>
+					<view class="tips-box" wx:for="{{userTip.tips}}" wx:for-item="tip" wx:key="tipsName">
+						<view class="tips-tag">{{tip.tipsName}}</view>
+						<text class="tips-content">{{tip.tipsInfo}}</text>
+					</view>
+					<view class="userninfo-box">
+						<mp-icon data-sound="{{userTip.sound}}" icon="play" color="white" size="{{25}}" bindtap="playSound"></mp-icon>
+						<!-- <mp-icon data-sound="{{userTip.sound}}" icon="add" color="white" size="{{25}}" bindtap="editTip" bindlongtap="editTip"></mp-icon> -->
+					</view>
+				</view>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item bind:touchstart="touchStart" bind:touchend="touchEnd">
+			<scroll-view scroll-y="true">
+				<view class="user-tips" wx:for="{{usrTipsShuffle}}" wx:for-item="userTip" wx:key="word">
+					<view class="word-box">{{userTip.word}}</view>
+					<view class="tips-box" wx:for="{{userTip.tips}}" wx:for-item="tip" wx:key="tipsName">
+						<view class="tips-tag">{{tip.tipsName}}</view>
+						<text class="tips-content">{{tip.tipsInfo}}</text>
+					</view>
+					<view class="userninfo-box">
+						<mp-icon data-sound="{{userTip.sound}}" icon="play" color="white" size="{{25}}" bindtap="playSound"></mp-icon>
+						<!-- <mp-icon data-sound="{{userTip.sound}}" icon="add" color="white" size="{{25}}" bindtap="editTip" bindlongtap="editTip"></mp-icon> -->
+					</view>
+				</view>
+			</scroll-view>
+		</swiper-item>
+	</swiper>
+
+</view>

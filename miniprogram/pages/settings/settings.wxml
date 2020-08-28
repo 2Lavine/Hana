@@ -1,0 +1,54 @@
+<view class="container" bind:touchstart="touchStart" bind:touchend="touchEnd">
+	<view class="setting-head">
+		<view class="head">
+			<!-- <image  src="../../images/logo.jpg	" mode="cover"></image> -->
+			<button class="avatar-box" style=" background-image: url({{avatarUrl}}); opacity:0" open-type='getUserInfo' lang="zh_CN" bind:getuserinfo="onGotUserInfo" bindtap="onGetOpenid"></button>
+			<image class="avatar-box active" src="{{avatarUrl}}"></image>
+			<view class="info-box">
+				<text class="nickName-item">{{nickName}}</text>
+				<text class="info-item">leavel:{{levelName}}</text>
+				<text class="info-item">已背单词:{{remind[0].value}}</text>
+			</view>
+			<view class="edit-box" bind:tap="toEdit">
+				<mp-icon icon="arrow" size="{{25}}"></mp-icon>
+			</view>
+		</view>
+		<view class="days-content">
+			<view class="days-content-item" wx:for="{{remind}}" wx:key="name">
+				<view class="days-item">{{item.value}}</view>
+				<view class="daysName-item">{{item.name}}</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="setting-content">
+		<view class="tips">学习设置</view>
+		<view class="setting-item">
+			<view class="setting-item-infoL">每日学习量</view>
+			<input class="evry-word-input" value="{{wordsLimit}}" bindblur="changeWordsLimit" />
+		</view>
+		<view class="setting-item">
+			<view class="setting-item-infoL">我的卡片</view>
+			<view class="setting-item-infoR" bindtap="showCard">查看</view>
+		</view>
+		<view class="setting-item">
+			<view class="setting-item-infoL">词库选择</view>
+			<view class="setting-item-infoR">
+				<picker value="{{dict_index}}" range="{{dict}}" bindchange="changeDict">
+					<view class="picker">
+						{{dict[dict_index]}}
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view class="setting-item">
+			<view class="setting-item-infoL">分享记录</view>
+			<view class="setting-item-infoR switch-item">
+				<switch checked="{{shareFlag}}" color="#EB7B99" bindchange="shareInfo"></switch>
+			</view>
+		</view>
+
+	</view>
+	<view class="postscript">选择新的词库后会更新单词进度 </view>
+	<view class="postscript">分享记录仅指分享自己背单词过程中的错误记录，可在单词本中全部排行查看 </view>
+</view>

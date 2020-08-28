@@ -1,0 +1,23 @@
+<view class="container">
+		<form class="partWrite" bindsubmit="show" bindreset="reset">
+				<picker range="{{tagNames}}" class="picktag" bind:change="getTag" name="picker">请选择标签</picker>
+				<icon class="iconfont icon-aixin"></icon>
+				<view class="text-area">
+						<textarea name="textarea" value="{{textareaContent}}" placeholder="请在此处输入"></textarea>
+				</view>
+				<view class="button-box">
+						<button class="btn" form-type="submit">确认</button>
+						<button class="btn" form-type="submit">提交</button>
+						<button class="btn" form-type="reset">重制</button>
+				</view>
+		</form>
+		<view class="partView">
+				<scroll-view>
+						<view wx:for="{{chosedTag}}" class="tips-box">
+								<view class="tips-tag">{{item}}</view>
+								<view class="tips-context">{{inputTips[index]===null?'':inputTips[index]}}</view>
+								<mp-icon class="tips-icon" data-id="{{index}}" icon="delete" color="grey" size="{{25}}" bindtap="deleteTip" ></mp-icon>
+						</view>
+				</scroll-view>
+		</view>
+</view>

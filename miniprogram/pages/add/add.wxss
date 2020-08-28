@@ -1,0 +1,56 @@
+
+.tips-box {
+  display: flex;
+  align-items: flex-start;
+}
+.tips-tag {
+  background-color: teal;
+  color: white;
+  margin: 3vw;
+  width: 15vw;
+  text-align: center;
+}
+.tips-context{
+  width:65vw;
+  margin-top: 3vw;
+  word-wrap:break-word;
+}
+mp-icon{
+  margin-top: 3vw;
+}
+
+textarea {
+  margin: 3vw 0;
+  border: 1px solid black;
+  width: 80vw;
+  height: 15vh;
+}
+
+.text-area {
+  /* border: 1px solid black; */
+  width: 80vw;
+  height: 20vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.partWrite {
+  flex: 1;
+  align-self: center;
+}
+.partView {
+  flex-direction: column;
+  margin: 2vw;
+  margin-top: 4vw;
+  padding-top: 2vw;
+  background-color: whitesmoke;
+}
+.button-box {
+  display: flex;
+}
+button {
+  width: 25% !important;
+  font-size: small !important;
+}

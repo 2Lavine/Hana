@@ -1,0 +1,67 @@
+page {
+  height: 100%;
+}
+
+.downloading {
+  animation: star-move1 1.5s .1s cubic-bezier(0.25, 0.1, 0.25, 0.25);
+}
+
+@keyframes star-move1 {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  85% {
+    transform: translate(0, 70vh) scale(0.75);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(0, 100vh) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.container {
+  height: 100%;
+  background-image: linear-gradient(rgba(235, 123, 153, 0.3),
+      90%,
+      rgba(236, 236, 236, 0.1));
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  color: ghostwhite;
+  text-shadow: 1rpx 1rpx black;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards:after {
+  content: "";
+  width: 33%;
+}
+
+.card>image {
+  width: 28vw;
+  height: 42vw;
+  border-radius: 5%;
+  /* margin: 0 auto; */
+  object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card {
+  margin: 2vw;
+}
+
+.card-info {
+  text-align: center;
+  font-size: large;
+  color: whitesmoke;
+}

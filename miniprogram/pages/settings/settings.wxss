@@ -1,0 +1,152 @@
+.page {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.avatar-box {
+  border: 1px solid white;
+  border-radius: 20% !important;
+  width: 18vw !important;
+  height: 18vw !important;
+  margin: 8vw !important;
+  margin-bottom: 0vw;
+  margin-top: 0vw;
+  background-repeat: no-repeat;
+  background-size: 18vw 18vw;
+  margin-right: -10vw !important;
+  /* background-size: cover; */
+}
+.active{
+  margin-left: -10vw !important;
+  margin-right: 8vw !important;
+}
+
+
+
+.nickName-item {
+  font-size: 20px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.info-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background: rgba(235, 123, 153, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.days-content {
+  margin-top: 5vw;
+  width: 90vw;
+  height: 20vw;
+  border-radius: 5%;
+  background-color: rgba(235, 123, 153, 1);
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.days-content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.days-item {
+  font-size: 40rpx;
+}
+
+.setting-content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 95%;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+  padding: 2vw;
+  margin: 0 1vw;
+  border-bottom: 1px solid pink;
+}
+
+.tips {
+  margin: 3vw 0;
+  padding-left: 3vw;
+  height: 15vw;
+  line-height: 15vw;
+  background-color: rgba(235, 123, 153, 1);
+  color: whitesmoke;
+  border-radius: 3%;
+}
+
+.evry-word-input {
+  border: 2px solid #EB7B99;
+  border-radius: 5%;
+  text-align: center;
+  width: 20vw;
+  height: 7vw;
+  margin-right: 5vw;
+  font-size: 16px;
+}
+
+.setting-item-infoL {
+  margin-left: 5vw;
+}
+
+.setting-item-infoR {
+  margin-right: 5vw;
+  width: 20vw;
+  height: 7vw;
+  line-height: 7vw;
+  text-align: center;
+  border: 2px solid rgba(235, 123, 153);
+  background-color: rgba(235, 123, 153);
+  border-radius: 7%;
+  color: white;
+  font-size: 16px;
+}
+
+.switch-item {
+  border: 2px solid rgba(235, 123, 153, 0);
+  background-color: rgba(235, 123, 153, 0);
+
+}
+
+.edit-box {
+  margin-right: 5vw;
+}
+
+.setting-head {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3%;
+  box-shadow: 1px 1px 3px #aaaaaa;
+  margin: 5vw;
+  margin-top: 4vw;
+  padding-top: 2vw;
+}
+
+.postscript {
+  color: #BEBEBC;
+  font-size: small;
+  margin: 2vw 10vw;
+  font-style: italic;
+  font-weight: light;
+}
